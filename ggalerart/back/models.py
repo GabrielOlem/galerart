@@ -49,6 +49,22 @@ class Gallery(models.Model):
     def __str__(self):
         return self.nome
 
+class FinalUser(models.Model):
+
+    class Meta:
+
+        db_table = 'FinalUser'
+
+    nome = models.CharField(max_length=200) 
+    gostos =models.CharField(max_length=400)
+    interesses = models.CharField(max_length=100)
+    usuario = models.ForeignKey('User', related_name='finaluser', on_delete=models.PROTECT)
+
+    # galeria, exposições e obras  
+    # galeria = models.ForeignKey('Gallery', related_name='artists', on_delete=models.PROTECT)
+    
+    def __str__(self):
+        return self.nome
 
 class Expo(models.Model):
 

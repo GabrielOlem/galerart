@@ -1,5 +1,5 @@
-from .models import User, Artist, Gallery, Expo, GalleryExpo, Art
-from .serializers import UserSerializer, ArtistSerializer, GallerySerializer, ExpoSerializer, GalleryExpoSerializer, ArtSerializer
+from .models import User, Artist, Gallery, Expo, GalleryExpo, Art, FinalUser
+from .serializers import UserSerializer, ArtistSerializer, GallerySerializer, ExpoSerializer, GalleryExpoSerializer, ArtSerializer, FinalUserSerializer
 from rest_framework import generics
 from django_filters import rest_framework as filters
 from rest_framework.permissions import IsAdminUser, AllowAny
@@ -111,6 +111,24 @@ class ArtList(generics.ListCreateAPIView):
 class ArtDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Art.objects.all()
     serializer_class = ArtSerializer
+    authentication_classes = [OAuth2Authentication, SessionAuthentication]
+    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = '__all__'
+
+class FinalUserList(generics.ListCreateAPIView):
+
+    queryset = FinalUser.objects.all()
+    serializer_class = FinalUserSerializer
+    authentication_classes = [OAuth2Authentication, SessionAuthentication]
+    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = '__all__'
+
+
+class FinalUserDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = FinalUser.objects.all()
+    serializer_class = FinalUserSerializer
     authentication_classes = [OAuth2Authentication, SessionAuthentication]
     permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
     filter_backends = (filters.DjangoFilterBackend,)

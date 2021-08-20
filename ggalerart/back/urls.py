@@ -20,4 +20,7 @@ urlpatterns = [
 
     url(r'^arts/$', views.ArtList.as_view(), name='art-list'),
     url(r'^art/(?P<pk>[0-9]+)/$', views.ArtDetail.as_view(), name='art-detail'),
+
+    url(r'^finalusers/$', views.FinalUserList.as_view(), name='finaluser-list'),
+    url(r'^finaluser/(?P<pk>[0-9]+)/$', views.FinalUserDetail.as_view(), name='finaluser-detail'),
 ]
