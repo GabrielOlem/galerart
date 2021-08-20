@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User, Artist, Gallery, Expo, GalleryExpo
+from .models import User, Artist, Gallery, Expo, GalleryExpo, Art
 
 class UserSerializer(serializers.ModelSerializer):
 
@@ -34,4 +34,12 @@ class GalleryExpoSerializer(serializers.ModelSerializer):
     class Meta:
 
         model = GalleryExpo
+        fields = '__all__'
+    
+
+class ArtSerializer(serializers.ModelSerializer):
+
+    class Meta:
+
+        model = Art
         fields = '__all__'

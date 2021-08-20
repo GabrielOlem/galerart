@@ -78,3 +78,16 @@ class GalleryExpo(models.Model):
 
     gallery = models.ForeignKey('Gallery', related_name='galleryexpo', on_delete=models.PROTECT)
     expo = models.ForeignKey('Expo', related_name='galleryexpo', on_delete=models.PROTECT)
+
+class Art(models.Model):
+
+    class Meta:
+
+        db_table = 'art'
+
+    nome = models.CharField(max_length=200) 
+    corrente = models.CharField(max_length=200)
+    tipo = models.CharField(max_length=200)  
+    descricao = models.CharField(max_length=400)
+    preco = models.FloatField() 
+    artista = models.ForeignKey('Artist', related_name='art', on_delete=models.PROTECT)

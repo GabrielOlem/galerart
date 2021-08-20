@@ -17,4 +17,7 @@ urlpatterns = [
 
     url(r'^galleryexpos/$', views.GalleryExpoList.as_view(), name='galleryexpo-list'),
     url(r'^galleryexpo/(?P<pk>[0-9]+)/$', views.GalleryExpoDetail.as_view(), name='galleryexpo-detail'),
+
+    url(r'^arts/$', views.ArtList.as_view(), name='art-list'),
+    url(r'^art/(?P<pk>[0-9]+)/$', views.ArtDetail.as_view(), name='art-detail'),
 ]
