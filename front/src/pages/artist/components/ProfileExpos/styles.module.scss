@@ -1,0 +1,126 @@
+.container{
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem 0 2rem;
+  max-height: 780px;
+
+  background-color: #F5F5F5;
+
+}
+
+.title{
+  font-family: 'Montserrat', sans-serif;
+  padding: 1.5rem 1rem 0 5rem;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.content{
+  margin: 2rem 1rem 0 5rem;
+  max-height: 660px;
+  overflow-y: scroll;
+
+  font-family: 'Montserrat', sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 10px;     
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: #C4C4C4;
+    border-radius: 20px;       
+    border: 4px solid #C4C4C4;   
+  }
+}
+
+.cardExpo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  margin-bottom: 2rem;
+  margin-right: 3.5rem;
+  border-bottom: solid 1px #BDBDBD;
+  
+  font-family: 'Montserrat';
+
+  .expoTitle{
+    font-weight: 500;
+    font-size: 28px;
+  }
+
+  .expoData{
+    display: flex;
+    align-items: center;
+
+    p{
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    
+    div{
+      display: flex;
+      padding-right: 4rem;
+      p{
+        font-size: 1.25rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  .expoLocation{
+    display: flex;
+    align-items: center;
+
+    p{
+      font-weight: 400;
+      font-size: 1rem;
+      padding-left: 1rem;
+    }
+  }
+
+  .expoSchedule{
+    display: flex;
+    flex-direction: column;
+
+    .expoScheduleMessage{
+      font-weight: 400;
+      font-size: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .expoHour{
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+  }
+
+  .expoButton{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    button{
+      display: flex;
+      align-items: center;
+      outline: none;
+      border: none;
+      background-color: #F5F5F5;
+
+      font-family: 'Montserrat', sans-serif;
+
+      padding-bottom: 1rem;
+
+      p{
+        font-weight: 500;
+        font-size: 14px;
+        padding-right: 1rem;
+      }
+    }
+  }
+}
+
+.cardExpo:last-child{
+  margin-bottom: 0;
+}

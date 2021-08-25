@@ -1,0 +1,117 @@
+.container {
+  flex: 1;
+  display: flex;
+  min-height: 100px;
+  width: 100%;
+  align-items: center;
+  border-bottom: 2px solid #c4c4c4;
+}
+.title {
+  flex: 1;
+  display: flex;
+  h2:nth-child(1) {
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #595959;
+  }
+  h2:nth-child(2) {
+    color: #ff7600;
+    font-family: "montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+  }
+  h2:nth-child(3) {
+    color: #cd113b;
+    font-family: "montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+  }
+  h2:nth-child(4) {
+    color: #52006a;
+    font-family: "montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+  }
+}
+.nav {
+  flex: 3;
+  display: flex;
+  div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    button {
+      font-family: "montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      border: none;
+      background-color: transparent;
+    }
+  }
+  div:nth-child(1) {
+    justify-content: flex-end;
+  }
+  div:nth-child(2) {
+    justify-content: center;
+  }
+  div:nth-child(3) {
+    justify-content: flex-start;
+  }
+}
+.login2 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  div {
+    margin-right: 1rem;
+    background-color: #c4c4c4;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+  }
+  p {
+    font-family: "montserrat", sans-serif;
+    font-weight: 400;
+    font-family: 20px;
+  }
+}
+.login1 {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  button {
+    font-family: "montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+
+    transition: filter 0.2s;
+
+    &:first-child {
+      margin-right: 1.2rem;
+      background-color: #ff7600;
+      color: white;
+    }
+    &:first-child:hover {
+      filter: brightness(0.8);
+      cursor: pointer;
+    }
+
+    &:last-child {
+      background-color: #595959;
+      color: white;
+    }
+
+    &:last-child:hover {
+      filter: brightness(0.8);
+      cursor: pointer;
+    }
+  }
+}

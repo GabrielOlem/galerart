@@ -1,0 +1,117 @@
+.container{
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardProfileImage{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0 4rem 0;
+
+  .profileImageContent{
+    width: 200px;
+    height: 200px;
+    position: relative;
+
+    .yellowCircle{
+      width: 165px;
+      height: 165px;
+      background-color: #FFA900;
+      border-radius: 50%;
+      position: absolute;
+      left: 20px;
+      top: -10px;
+    }
+    
+    .redCircle{
+      width: 165px;
+      height: 165px;
+      background-color: #CD113B;
+      border-radius: 50%;
+      position: absolute;
+      left: 70px;
+      top: 35px;
+    }
+    
+    .purpleSquare{
+      width: 170px;
+      height: 170px;
+      background-color: #52006A;
+      border-radius: 16px;
+      position: absolute;
+      top: 55px;
+    }
+  
+    .profileImage{
+      position: absolute;
+      left: 25px;
+      top: 20px;
+    }
+  }
+}
+
+.cardProfileContent{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  margin: 2rem 4rem 0 4rem;
+  border-bottom: 1px solid #BDBDBD;
+
+  p{
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .profileName{
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .profileArtType{
+    display: flex;
+    align-items: center;
+    padding-top: 1.5rem;
+
+    p{
+      font-weight: 500;
+      font-size: 18px;
+      padding-left: 1rem;
+
+    }
+  }
+
+  .profileDescription{
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 1.5rem;
+  }
+}
+
+.cardProfileContact{
+  flex: 1;
+  display: flex;
+  padding: 3rem 4rem 0 4rem;
+
+  .profileContactType{
+    padding-right: 4rem;
+
+    p{
+      font-family: 'Montserrat', sans-serif;
+      padding-bottom: 1rem;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+
+  .profileContactInfo{
+    p{
+      font-family: 'Montserrat', sans-serif;
+      padding-bottom: 1rem;
+      font-weight: 400;
+      font-size: 18px;
+    }
+  }
+}
