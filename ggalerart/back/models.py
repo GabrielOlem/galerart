@@ -10,13 +10,13 @@ class User(models.Model):
 
         db_table = 'user'
 
-    nomeUsuario = models.CharField(max_length=200, unique=True)
+    #nomeUsuario = models.CharField(max_length=200, unique=True)
     email = models.CharField(max_length=200, unique=True)
     password = models.CharField(max_length=20)
     
 
     def __str__(self):
-        return self.nomeUsuario
+        return self.email
 
 class Artist(models.Model):
 
@@ -109,4 +109,5 @@ class Art(models.Model):
     tipo = models.CharField(max_length=200)  
     descricao = models.CharField(max_length=400)
     preco = models.FloatField(validators=[MinValueValidator(0)]) 
-    artista = models.ForeignKey('Artist', related_name='art', on_delete=models.PROTECT, unique=True)
+    artista = models.OneToOneField(Artist, on_delete=models.CASCADE)
+    #artista = models.ForeignKey('Artist', related_name='art', on_delete=models.PROTECT, unique=True)

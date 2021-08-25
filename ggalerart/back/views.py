@@ -13,8 +13,8 @@ class UserList(generics.ListCreateAPIView):
 
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
@@ -22,8 +22,8 @@ class UserList(generics.ListCreateAPIView):
 class UserDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
@@ -31,8 +31,8 @@ class ArtistList(generics.ListCreateAPIView):
 
     queryset = Artist.objects.all()
     serializer_class = ArtistSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
@@ -40,8 +40,8 @@ class ArtistList(generics.ListCreateAPIView):
 class ArtistDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Artist.objects.all()
     serializer_class = ArtistSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
@@ -49,16 +49,16 @@ class GalleryList(generics.ListCreateAPIView):
 
     queryset = Gallery.objects.all()
     serializer_class = GallerySerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
 class GalleryDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Gallery.objects.all()
     serializer_class = GallerySerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
@@ -66,8 +66,8 @@ class ExpoList(generics.ListCreateAPIView):
 
     queryset = Expo.objects.all()
     serializer_class = ExpoSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
@@ -75,8 +75,8 @@ class ExpoList(generics.ListCreateAPIView):
 class ExpoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Expo.objects.all()
     serializer_class = ExpoSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
     
@@ -84,8 +84,8 @@ class GalleryExpoList(generics.ListCreateAPIView):
 
     queryset = GalleryExpo.objects.all()
     serializer_class = GalleryExpoSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
@@ -93,8 +93,8 @@ class GalleryExpoList(generics.ListCreateAPIView):
 class GalleryExpoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = GalleryExpo.objects.all()
     serializer_class = GalleryExpoSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
@@ -102,8 +102,8 @@ class ArtList(generics.ListCreateAPIView):
 
     queryset = Art.objects.all()
     serializer_class = ArtSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
@@ -111,8 +111,8 @@ class ArtList(generics.ListCreateAPIView):
 class ArtDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Art.objects.all()
     serializer_class = ArtSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
@@ -120,8 +120,8 @@ class FinalUserList(generics.ListCreateAPIView):
 
     queryset = FinalUser.objects.all()
     serializer_class = FinalUserSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'
 
@@ -129,7 +129,7 @@ class FinalUserList(generics.ListCreateAPIView):
 class FinalUserDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = FinalUser.objects.all()
     serializer_class = FinalUserSerializer
-    authentication_classes = [OAuth2Authentication, SessionAuthentication]
-    permission_classes = [Or(IsAdminUser, TokenHasReadWriteScope)]
+    authentication_classes = []
+    permission_classes = []
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = '__all__'

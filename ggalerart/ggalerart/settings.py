@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5!u71prf+l$%!xr58c5nta2gw(vv%a4&064hx=gk+ckay0k%wn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'back',
     'rest_framework',
     'django_filters',
-    'oauth2_provider'
+    'corsheaders'
+    #'oauth2_provider'
     
 ]
 
@@ -52,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
 ]
 
 ROOT_URLCONF = 'ggalerart.urls'
@@ -130,13 +133,16 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': ('oauth2_provider.contrib.rest_framework.OAuth2Authentication',),
+    #'DEFAULT_AUTHENTICATION_CLASSES': ('oauth2_provider.contrib.rest_framework.OAuth2Authentication',),
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
 }
 
 
-OAUTH2_PROVIDER = {
-    # this is the list of available scopes
-    'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Access to your groups'},
-    'ACCESS_TOKEN_EXPIRE_SECONDS': 36000,
-}
+#OAUTH2_PROVIDER = {
+#    # this is the list of available scopes
+#    'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Access to your groups'},
+#    'ACCESS_TOKEN_EXPIRE_SECONDS': 36000,
+#}
+
+
+CORS_ALLOW_ALL_ORIGINS = True
